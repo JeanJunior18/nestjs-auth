@@ -57,6 +57,9 @@ export class User {
   password: string;
 
   @Prop()
+  role: string;
+
+  @Prop()
   profilePicture?: string;
 
   @Prop()

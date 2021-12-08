@@ -8,6 +8,7 @@ export const usersMock: User[] = [
     password: '$2a$10$bUCyHPUQTTXXnuBY2ZM./uphuqxL6ZU3ZkZiMFfWR65zIkM.YrgQa',
     socialMedia: {},
     profilePicture: 'https://randomuser.me/api/portraits/men/83.jpg',
+    role: 'user',
   },
   {
     id: '2',
@@ -16,6 +17,7 @@ export const usersMock: User[] = [
     password: '$2a$10$ubLIwiDuoaX79Dy4IpnE.emxDVRE.Rlqb4XMKG5Z0oaIXBfpNR.Y.',
     socialMedia: {},
     profilePicture: 'https://randomuser.me/api/portraits/women/32.jpg',
+    role: 'user',
   },
   {
     id: '3',
@@ -24,5 +26,6 @@ export const usersMock: User[] = [
     password: '123456',
     socialMedia: {},
     profilePicture: 'https://randomuser.me/api/portraits/men/78.jpg',
+    role: 'user',
   },
 ];

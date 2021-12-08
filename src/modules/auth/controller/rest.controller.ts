@@ -1,6 +1,8 @@
 import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
+import { Role } from 'src/modules/auth/decorator/role.decorator';
 import { RequestLoginDto } from 'src/modules/auth/dto/request-login.dto';
 import { JwtGuard } from 'src/modules/auth/guard/jwt.guard';
+import { RoleGuard } from 'src/modules/auth/guard/role.guard';
 import { AuthenticateUserService } from 'src/modules/auth/useCases/authenticate-user.service';
 
 @Controller('auth')
@@ -11,7 +13,8 @@ export class AuthController {
     return this.authenticateUser.execute(data);
   }
 
-  @UseGuards(JwtGuard)
+  @UseGuards(JwtGuard, RoleGuard)
+  @Role('admin')
   @Get('ping')
   test() {
     return 'pong';
