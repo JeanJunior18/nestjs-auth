@@ -54,7 +54,7 @@ export class User {
   username: string;
 
   @Prop({ select: false })
-  password: string;
+  password?: string;
 
   @Prop()
   role: string;
